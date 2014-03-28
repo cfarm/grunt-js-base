@@ -49,7 +49,7 @@ module.exports = function(grunt){
       },
       css: {
         files: ['scss/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass:dev']
       },
       js: {
         files: ['js/**/*.js', '!js/script.min.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
