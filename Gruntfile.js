@@ -14,12 +14,12 @@ module.exports = function(grunt){
           sourcemap: true
         },
         files: {
-          'css/styles.css' : 'scss/styles.scss'
+          'stylesheets/css/styles.css' : 'stylesheets/scss/styles.scss'
         }
       },
       prod: {
         files: {
-          'css/styles.css' : 'scss/styles.scss'
+          'stylesheets/css/styles.css' : 'stylesheets/scss/styles.scss'
         }
       }
     },
@@ -31,7 +31,7 @@ module.exports = function(grunt){
         },
         files: {
           // Where to combine and minify JS files, followed by list of which files to include and exclude
-          'js/script.min.js' : ['js/plugins/*.js', 'js/script.js', '!js/plugins/modernizr.js']
+          'js/script.min.js' : ['js/scripts/*.js', 'js/script.js', '!js/plugins/modernizr.js']
         }
       },
       prod: {
@@ -48,11 +48,11 @@ module.exports = function(grunt){
         livereload: true
       },
       css: {
-        files: ['scss/*.scss'],
+        files: ['stylesheets/scss/*.scss'],
         tasks: ['sass:dev']
       },
       js: {
-        files: ['js/**/*.js', '!js/script.min.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
+        files: ['js/scripts/*.js', '!js/script.min.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
         tasks: ['uglify:dev']
       }
 		}
