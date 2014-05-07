@@ -6,11 +6,11 @@ module.exports = function(grunt){
 
     sass: {
       options: {
-        precision: 5,
-        style: 'nested', // compact, compressed, nested or expanded
+        precision: 5
       },
       dev: {
         options: {
+          style: 'nested', // compact, compressed, nested or expanded
           sourcemap: true
         },
         files: {
@@ -18,6 +18,10 @@ module.exports = function(grunt){
         }
       },
       prod: {
+        options: {
+          style: 'compressed', // compact, compressed, nested or expanded
+          sourcemap: true
+        },
         files: {
           'stylesheets/css/styles.css' : 'stylesheets/scss/styles.scss'
         }
