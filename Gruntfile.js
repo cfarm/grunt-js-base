@@ -35,13 +35,13 @@ module.exports = function(grunt){
         },
         files: {
           // Where to combine and minify JS files, followed by list of which files to include and exclude
-          'js/script.min.js' : ['js/scripts/*.js', 'js/script.js', '!js/plugins/modernizr.js']
+          'js/script.min.js' : ['js/scripts/*.js', 'js/script.js']
         }
       },
       prod: {
         files: {
           // Where to combine and minify JS files, followed by list of which files to include and exclude
-          'js/script.min.js' : ['js/plugins/*.js', 'js/script.js', '!js/plugins/modernizr.js', '!js/plugins/livereload.js']
+          'js/script.min.js' : ['js/scripts/*.js', 'js/script.js', '!js/scripts/livereload.js']
         }
       }
     },
